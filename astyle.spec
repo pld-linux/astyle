@@ -13,6 +13,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Artistic Style is a reindenter and reformatter of C++, C and Java
 source code.
 
+%description -l pl
+Artistic Style to narzêdzie do reformatowania kodu z poprawianiem
+wciêæ dla ¼róde³ w C++, C i Javie.
+
 %prep
 %setup -q -c
 
