@@ -7,6 +7,8 @@ License:	GPL
 Group:		Development/Tools
 # Source0-md5:	4d8adbcd8703aea00fcd2670be090ddd
 Source0:	http://dl.sourceforge.net/%{name}/%{name}_%{version}.zip
+URL:		http://sourceforge.net/projects/astyle/
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
