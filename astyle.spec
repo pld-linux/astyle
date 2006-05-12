@@ -8,6 +8,7 @@ Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/astyle/%{name}_%{version}.zip
 # Source0-md5:	4d8adbcd8703aea00fcd2670be090ddd
 URL:		http://astyle.sourceforge.net/
+Patch0:		%{name}-Makefile.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -21,9 +22,11 @@ wciêæ dla ¼róde³ w C++, C i Javie.
 
 %prep
 %setup -q -c
+%patch0 -p1
 
 %build
 %{__make} \
+	CXX="%{__cxx}" \
 	CPPFLAGS="%{rpmcflags}"
 
 %install
