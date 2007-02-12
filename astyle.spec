@@ -1,5 +1,5 @@
 Summary:	Automatic Indentation Filter
-Summary(pl.UTF-8):   Automatyczny filtr wcięć
+Summary(pl.UTF-8):	Automatyczny filtr wcięć
 Name:		astyle
 Version:	1.15.3
 Release:	1
