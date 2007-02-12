@@ -1,5 +1,5 @@
 Summary:	Automatic Indentation Filter
-Summary(pl):	Automatyczny filtr wciêæ
+Summary(pl.UTF-8):   Automatyczny filtr wciÄ™Ä‡
 Name:		astyle
 Version:	1.15.3
 Release:	1
@@ -16,9 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Artistic Style is a reindenter and reformatter of C++, C and Java
 source code.
 
-%description -l pl
-Artistic Style to narzêdzie do reformatowania kodu z poprawianiem
-wciêæ dla ¼róde³ w C++, C i Javie.
+%description -l pl.UTF-8
+Artistic Style to narzÄ™dzie do reformatowania kodu z poprawianiem
+wciÄ™Ä‡ dla ÅºrÃ³deÅ‚ w C++, C i Javie.
 
 %prep
 %setup -q -c
