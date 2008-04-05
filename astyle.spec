@@ -1,15 +1,13 @@
 Summary:	Automatic Indentation Filter
 Summary(pl.UTF-8):	Automatyczny filtr wcięć
 Name:		astyle
-Version:	1.15.3
+Version:	1.22
 Release:	1
 License:	GPL v2
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/astyle/%{name}_%{version}.zip
-# Source0-md5:	4d8adbcd8703aea00fcd2670be090ddd
+Source0:	http://dl.sourceforge.net/astyle/%{name}_%{version}_linux.tar.gz
+# Source0-md5:	f319ee4e2538f5e6255211975b4e36cc
 URL:		http://astyle.sourceforge.net/
-Patch0:		%{name}-Makefile.patch
-BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,24 +19,24 @@ Artistic Style to narzędzie do reformatowania kodu z poprawianiem
 wcięć dla źródeł w C++, C i Javie.
 
 %prep
-%setup -q -c
-%patch0 -p1
+%setup -q -n %{name}
 
 %build
-%{__make} \
+%{__make} -C buildgcc \
 	CXX="%{__cxx}" \
 	CPPFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
 
-install astyle $RPM_BUILD_ROOT%{_bindir}
-
+%{__make} -C buildgcc install \
+	INSTALL=install \
+	prefix=$RPM_BUILD_ROOT%{_prefix}
+        
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc astyle.html astyle_release_notes.html
+%doc doc/*.html
 %attr(755,root,root) %{_bindir}/*
