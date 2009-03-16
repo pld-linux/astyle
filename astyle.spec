@@ -1,13 +1,14 @@
 Summary:	Automatic Indentation Filter
 Summary(pl.UTF-8):	Automatyczny filtr wcięć
 Name:		astyle
-Version:	1.22
+Version:	1.23
 Release:	1
 License:	GPL v2
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/astyle/%{name}_%{version}_linux.tar.gz
-# Source0-md5:	f319ee4e2538f5e6255211975b4e36cc
+# Source0-md5:	92945aa2831cb14e38da5e1b8665657e
 URL:		http://astyle.sourceforge.net/
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C buildgcc install \
 	INSTALL=install \
 	prefix=$RPM_BUILD_ROOT%{_prefix}
-        
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
