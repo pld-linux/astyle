@@ -5,7 +5,7 @@ Version:	1.24
 Release:	1
 License:	GPL v2
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/astyle/%{name}_%{version}_linux.tar.gz
+Source0:	http://downloads.sourceforge.net/astyle/%{name}_%{version}_linux.tar.gz
 # Source0-md5:	27cdb10523de59825d1228ac55b2c7c8
 URL:		http://astyle.sourceforge.net/
 BuildRequires:	libstdc++-devel
@@ -34,7 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 	INSTALL=install \
 	prefix=$RPM_BUILD_ROOT%{_prefix}
 
-# this files are in docdir
+# these files are in docdir
 rm -f $RPM_BUILD_ROOT/%{_datadir}/%{name}/{*.html,*.css}
 
 %clean
