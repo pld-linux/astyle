@@ -1,12 +1,12 @@
 Summary:	Automatic Indentation Filter
 Summary(pl.UTF-8):	Automatyczny filtr wcięć
 Name:		astyle
-Version:	2.01
+Version:	2.02
 Release:	1
 License:	GPL v2
 Group:		Development/Tools
 Source0:	http://downloads.sourceforge.net/astyle/%{name}_%{version}_linux.tar.gz
-# Source0-md5:	e85b31972c532373a4054842e2149b34
+# Source0-md5:	6ce1f5c766ba142f152dab4ddd1ee3b7
 URL:		http://astyle.sourceforge.net/
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
