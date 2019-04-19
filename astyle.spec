@@ -96,6 +96,9 @@ cp -p src/astyle.h $RPM_BUILD_ROOT%{_includedir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc LICENSE.md README.md doc/{*.html,*.css}
